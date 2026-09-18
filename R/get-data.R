@@ -52,7 +52,7 @@
 #' @seealso [install_fishglob_data()]
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' # The first time, start by installing the
 #' # database locally:
 #' install_fishglob_data()

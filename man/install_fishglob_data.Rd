@@ -18,7 +18,7 @@ builds a local DuckDB database. Later sessions reuse that database.
 Intended to be used before \code{\link[=get_data]{get_data()}}.
 }
 \examples{
-\donttest{
+\dontrun{
 install_fishglob_data()
 # then see ?get_getdata
 }

@@ -219,7 +219,7 @@
 #' @seealso [get_data()]
 #' @export
 #' @examples
-#' \donttest{
+#' \dontrun{
 #' install_fishglob_data()
 #' # then see ?get_getdata
 #' }

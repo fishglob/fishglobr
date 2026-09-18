@@ -83,7 +83,7 @@ Functions to query the FishGlob database. These functions assume the user has al
 appended by joining (e.g., \code{\link[dplyr:left_join]{dplyr::left_join()}}) the data returned by \code{get_data()} with the data from \code{get_taxon_table()}, \code{get_haul_table()}, or \code{get_survey_table()}.
 }
 \examples{
-\donttest{
+\dontrun{
 # The first time, start by installing the
 # database locally:
 install_fishglob_data()
