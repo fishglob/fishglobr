@@ -1,0 +1,16 @@
+Package: fishglobr
+Type: Package
+Title: Download and Query the FishGlob Database
+Version: 0.0.0.9000
+Authors@R:
+    person("First", "Last", , "first.last@example.com", role = c("aut", "cre"))
+Description: What the package does (one paragraph).
+License: GPL (>= 3)
+Encoding: UTF-8
+Imports:
+    cli,
+    curl,
+    DBI,
+    duckdb
+Roxygen: list(markdown = TRUE)
+Config/roxygen2/version: 8.1.0

@@ -1,0 +1,16 @@
+.Rproj.user
+.Rhistory
+.RData
+.httr-oauth
+.DS_Store
+.quarto
+
+scratch/
+data-raw/dolthub/
+data-raw/dolt/
+data-raw/catch.rds
+data-raw/fishglob.duckdb
+data-raw/fishglob.duckdb.wal
+data-raw/haul.rds
+data-raw/survey.rds
+data-raw/taxon.rds
