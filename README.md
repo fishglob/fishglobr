@@ -5,6 +5,7 @@
 
 <!-- badges: start -->
 
+[![R-CMD-check](https://github.com/seananderson/fishglobr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/seananderson/fishglobr/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 ## THIS IS AN EXPERIMENTAL DRAFT PROJECT NOT BE USED AT THIS STAGE!
@@ -70,9 +71,10 @@ dat <- get_data(
   regex = TRUE,
   year = 2000:2021
 )
+dat <- dat[order(rev(dat$scientific_name), dat$year, dat$haul_id), ]
 head(dat[c("scientific_name", "year", "latitude", "longitude", "wgt_cpue")], n = 3)
-#>      scientific_name year latitude longitude wgt_cpue
-#> 1 Sebastes fasciatus 2021 41.40189 -66.16553    0.002
-#> 2 Sebastes fasciatus 2021 41.93574 -65.85122    0.016
-#> 3 Sebastes fasciatus 2021 42.17893 -67.67522    1.260
+#>          scientific_name year latitude longitude wgt_cpue
+#> 39679 Sebastes diploproa 2019    36.36   -122.04    17.68
+#> 40758    Sebastes alutus 2019    48.28   -125.20    53.52
+#> 40957 Sebastes zacentrus 2019    39.74   -123.97     0.08
 ```
