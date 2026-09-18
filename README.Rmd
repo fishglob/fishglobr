@@ -64,5 +64,5 @@ dat <- get_data(
   regex = TRUE,
   year = 2000:2021
 )
-head(dat[c("survey_unit", "year", "latitude", "longitude", "wgt_cpue")], n = 3)
+head(dat[c("scientific_name", "year", "latitude", "longitude", "wgt_cpue")], n = 3)
 ```

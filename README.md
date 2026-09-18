@@ -63,9 +63,9 @@ dat <- get_data(
   regex = TRUE,
   year = 2000:2021
 )
-head(dat[c("survey_unit", "year", "latitude", "longitude", "wgt_cpue")], n = 3)
-#>   survey_unit year latitude longitude   wgt_cpue
-#> 1   NEUS-Fall 2021 42.04747 -67.71460 0.06549118
-#> 2   NEUS-Fall 2021 41.84667 -68.20291 0.25524769
-#> 3   NEUS-Fall 2021 42.20143 -66.86743 1.13853904
+head(dat[c("scientific_name", "year", "latitude", "longitude", "wgt_cpue")], n = 3)
+#>      scientific_name year latitude longitude wgt_cpue
+#> 1 Sebastes fasciatus 2021 41.40189 -66.16553    0.002
+#> 2 Sebastes fasciatus 2021 41.93574 -65.85122    0.016
+#> 3 Sebastes fasciatus 2021 42.17893 -67.67522    1.260
 ```
