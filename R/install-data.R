@@ -71,7 +71,7 @@
       force = TRUE
     )
     # avoid rendering the same completed bar again during on.exit().
-    cli::cli_progress_done(id = progress_id, result = "clear")
+    cli::cli_progress_done(id = progress_id, result = "done")
     progress_id <- NULL
   }
   succeeded <- TRUE

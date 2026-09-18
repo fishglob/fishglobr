@@ -37,9 +37,20 @@ First we load the package and download and install the database locally.
 We only have to do this once.
 The data is stored in a local DuckDB database.
 
-```{r load, message=FALSE}
+```{r load, message=FALSE, eval=FALSE}
 library(fishglobr)
 install_fishglob_data()
+Downloading catch ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ |  65 MB/ 65 MB ETA:  0s
+Downloading haul ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ | 4.7 MB/4.7 MB ETA:  0s
+Downloading taxon ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ |  49 kB/ 49 kB ETA:  0s
+Downloading survey ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ | 0.7 kB/0.7 kB ETA:  0s
+Building the local FishGlob DuckDB database
+FishGlob data are ready in
+~/Library/Caches/org.R-project.R/R/fishglobr/fishglob.duckdb
+```
+
+```{r, echo=FALSE}
+library(fishglobr)
 ```
 
 ```{r cars}
