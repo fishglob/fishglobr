@@ -166,7 +166,11 @@
     fileext = ".duckdb"
   )
   on.exit(unlink(temporary_database), add = TRUE)
-  con <- DBI::dbConnect(duckdb::duckdb(), dbdir = temporary_database, read_only = FALSE)
+  con <- DBI::dbConnect(
+    duckdb::duckdb(shared_home = FALSE),
+    dbdir = temporary_database,
+    read_only = FALSE
+  )
   on.exit({
     if (!is.null(con) && DBI::dbIsValid(con)) {
       DBI::dbDisconnect(con, shutdown = TRUE)

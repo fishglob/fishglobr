@@ -1,0 +1,68 @@
+---
+output: github_document
+---
+
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+
+```{r, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "man/figures/README-",
+  out.width = "100%"
+)
+```
+
+# fishglobr
+
+<!-- badges: start -->
+<!-- badges: end -->
+
+## THIS IS AN EXPERIMENTAL DRAFT PROJECT NOT BE USED AT THIS STAGE!
+
+fishglobr (perhaps to be renamed to fishglob) is an R package for efficiently downloading, caching, and querying the [FishGlob](https://fishglob.sites.ucsc.edu/) database. FISHGLOB is an international consortium of scientists, experts and data providers who collect, curate, standardize, share and analyse data from scientific bottom trawl surveys.
+
+## Installation
+
+You can install the development version of fishglobr like so:
+
+``` r
+# temporary location; to be moved to fishglob group
+pak::pak("seananderson/fishglobr")
+```
+
+## Example
+
+First we load the package and download and install the database locally.
+We only have to do this once.
+The data is stored in a local DuckDB database.
+
+```{r load, message=FALSE}
+library(fishglobr)
+install_fishglob_data()
+```
+
+```{r cars}
+# Find available agency data sources
+get_sources()
+
+# The full list of available species:
+spp <- get_scientific_names()
+spp[1:5]
+
+# All Canary Rockfish data held by DFO
+dat <- get_data(
+  scientific_name = "sebastes pinniger",
+  source = "DFO"
+)
+nrow(dat)
+
+# All Sebastes data globally from 2000 to 2021
+# using a regular expression
+dat <- get_data(
+  scientific_name = "^sebastes*",
+  regex = TRUE,
+  year = 2000:2021
+)
+head(dat[c("survey_unit", "year", "latitude", "longitude", "wgt_cpue")], n = 3)
+```

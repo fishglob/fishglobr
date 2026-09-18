@@ -5,7 +5,11 @@
       "FishGlob data are not installed. Run {.code install_fishglob_data()}."
     )
   }
-  DBI::dbConnect(duckdb::duckdb(), dbdir = database_path, read_only = TRUE)
+  DBI::dbConnect(
+    duckdb::duckdb(shared_home = FALSE),
+    dbdir = database_path,
+    read_only = TRUE
+  )
 }
 
 .as_lower_text <- function(x) tolower(as.character(x))
