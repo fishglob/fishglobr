@@ -76,6 +76,5 @@ dat <- get_data(
   regex = TRUE,
   year = 2000:2021
 )
-dat <- dat[order(rev(dat$scientific_name), dat$year, dat$haul_id), ]
 head(dat[c("scientific_name", "year", "latitude", "longitude", "wgt_cpue")], n = 3)
 ```

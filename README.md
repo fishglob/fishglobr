@@ -71,10 +71,9 @@ dat <- get_data(
   regex = TRUE,
   year = 2000:2021
 )
-dat <- dat[order(rev(dat$scientific_name), dat$year, dat$haul_id), ]
 head(dat[c("scientific_name", "year", "latitude", "longitude", "wgt_cpue")], n = 3)
-#>          scientific_name year latitude longitude wgt_cpue
-#> 39679 Sebastes diploproa 2019    36.36   -122.04    17.68
-#> 40758    Sebastes alutus 2019    48.28   -125.20    53.52
-#> 40957 Sebastes zacentrus 2019    39.74   -123.97     0.08
+#>      scientific_name year latitude longitude wgt_cpue
+#> 1 Sebastes fasciatus 2021 40.75000 -68.80000      0.0
+#> 2 Sebastes fasciatus 2021 41.76667 -65.83333      0.0
+#> 3 Sebastes fasciatus 2021 42.01667 -65.96667      0.4
 ```
