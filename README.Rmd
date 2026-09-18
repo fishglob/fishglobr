@@ -19,7 +19,7 @@ knitr::opts_chunk$set(
 [![R-CMD-check](https://github.com/seananderson/fishglobr/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/seananderson/fishglobr/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
-## THIS IS AN EXPERIMENTAL DRAFT PROJECT NOT BE USED AT THIS STAGE!
+## THIS IS AN EXPERIMENTAL DRAFT PROJECT NOT TO BE USED AT THIS STAGE!
 
 fishglobr (perhaps to be renamed to fishglob) is an R package for efficiently downloading, caching, and querying the [FishGlob](https://fishglob.sites.ucsc.edu/) database. FISHGLOB is an international consortium of scientists, experts and data providers who collect, curate, standardize, share and analyse data from scientific bottom trawl surveys.
 
