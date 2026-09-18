@@ -54,16 +54,23 @@ stopifnot(
   all(haul$survey_unit %in% survey$survey_unit)
 )
 
-sapply(list(survey = survey, haul = haul, taxon = taxon, catch = catch), nrow)
+tables <- lapply(
+  list(survey = survey, haul = haul, taxon = taxon, catch = catch),
+  as.data.frame
+)
 
-glimpse(catch)
-glimpse(haul)
-glimpse(taxon)
-glimpse(survey)
+sapply(tables, nrow)
 
-saveRDS(catch, "data-raw/catch.rds", version = 2)
-saveRDS(survey, "data-raw/survey.rds", version = 2)
-saveRDS(haul, "data-raw/haul.rds", version = 2)
-saveRDS(taxon, "data-raw/taxon.rds", version = 2)
+glimpse(tables$catch)
+glimpse(tables$haul)
+glimpse(tables$taxon)
+glimpse(tables$survey)
+
+# Store base data frames so consumers do not need the tidyverse packages used
+# to create these tables just to restore the RDS files.
+saveRDS(tables$catch, "data-raw/catch.rds", version = 2)
+saveRDS(tables$survey, "data-raw/survey.rds", version = 2)
+saveRDS(tables$haul, "data-raw/haul.rds", version = 2)
+saveRDS(tables$taxon, "data-raw/taxon.rds", version = 2)
 
 # restart your R session - `data` is large
