@@ -106,31 +106,15 @@ returned by `get_data()` with the data from `get_taxon_table()`,
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 # The first time, start by installing the
 # database locally:
 install_fishglob_data()
-#> Downloading catch ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ |  65 MB/ 65 MB ETA:  0s
-#> 
-#> Downloading taxon ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ |  49 kB/ 49 kB ETA:  0s
-#> Downloading taxon ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ |  49 kB/ 49 kB ETA:  0s
-#> 
-#> Downloading survey ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ | 0.7 kB/0.7 kB ETA:  0s
-#> Downloading survey ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ | 0.7 kB/0.7 kB ETA:  0s
-#> 
-#> Building the local FishGlob DuckDB database
-#> ⠙ 1/11 ETA: 21s | Building local FishGlob database Reading catch 
-#> ⠹ 5/11 ETA:  4s | Building local FishGlob database Normalizing text 
-#> ⠸ 10/11 ETA:  1s | Building local FishGlob database Loading catch 
-#> ⠸ 11/11 ETA:  0s | Building local FishGlob database Verifying row counts 
-#> 
-#> FishGlob data are ready in /home/runner/.cache/R/fishglobr/fishglob.duckdb
 
 # Subsequently, the data does not need to be recached.
 
 # Find available agency data sources
 get_sources()
-#> [1] "DATRAS ICES" "DFO"         "IMR"         "NOAA"       
 
 # The full list of available species:
 spp <- get_scientific_names()
@@ -147,5 +131,5 @@ dat <- get_data(
   regex = TRUE,
   year = 2000:2021
 )
-# }
+} # }
 ```

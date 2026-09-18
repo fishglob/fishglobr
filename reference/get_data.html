@@ -140,31 +140,15 @@ appended by joining (e.g., <code>dplyr::left_join()</code>) the data returned by
 
     <div class="section level2">
     <h2 id="ref-examples">Examples<a class="anchor" aria-label="anchor" href="#ref-examples"></a></h2>
-    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="co"># \donttest{</span></span></span>
+    <div class="sourceCode"><pre class="sourceCode r"><code><span class="r-in"><span><span class="kw">if</span> <span class="op">(</span><span class="cn">FALSE</span><span class="op">)</span> <span class="op">{</span> <span class="co"># \dontrun{</span></span></span>
 <span class="r-in"><span><span class="co"># The first time, start by installing the</span></span></span>
 <span class="r-in"><span><span class="co"># database locally:</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="install_fishglob_data.html">install_fishglob_data</a></span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Downloading catch <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ </span>|  65 MB/ 65 MB ETA:  0s</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Downloading taxon <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ </span>|  49 kB/ 49 kB ETA:  0s</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Downloading taxon <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ </span>|  49 kB/ 49 kB ETA:  0s</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Downloading survey <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ </span>| 0.7 kB/0.7 kB ETA:  0s</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Downloading survey <span style="color: #00BB00;">■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ </span>| 0.7 kB/0.7 kB ETA:  0s</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> Building the local FishGlob DuckDB database</span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> ⠙ 1/11 ETA: 21s | Building local FishGlob database Reading catch </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> ⠹ 5/11 ETA:  4s | Building local FishGlob database Normalizing text </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> ⠸ 10/11 ETA:  1s | Building local FishGlob database Loading catch </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> ⠸ 11/11 ETA:  0s | Building local FishGlob database Verifying row counts </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> </span>
-<span class="r-msg co"><span class="r-pr">#&gt;</span> FishGlob data are ready in <span style="color: #0000BB;">/home/runner/.cache/R/fishglobr/fishglob.duckdb</span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Subsequently, the data does not need to be recached.</span></span></span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># Find available agency data sources</span></span></span>
 <span class="r-in"><span><span class="fu">get_sources</span><span class="op">(</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> [1] "DATRAS ICES" "DFO"         "IMR"         "NOAA"       </span>
 <span class="r-in"><span></span></span>
 <span class="r-in"><span><span class="co"># The full list of available species:</span></span></span>
 <span class="r-in"><span><span class="va">spp</span> <span class="op">&lt;-</span> <span class="fu">get_scientific_names</span><span class="op">(</span><span class="op">)</span></span></span>
@@ -181,7 +165,7 @@ appended by joining (e.g., <code>dplyr::left_join()</code>) the data returned by
 <span class="r-in"><span>  regex <span class="op">=</span> <span class="cn">TRUE</span>,</span></span>
 <span class="r-in"><span>  year <span class="op">=</span> <span class="fl">2000</span><span class="op">:</span><span class="fl">2021</span></span></span>
 <span class="r-in"><span><span class="op">)</span></span></span>
-<span class="r-in"><span><span class="co"># }</span></span></span>
+<span class="r-in"><span><span class="op">}</span> <span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
     </div>

@@ -28,13 +28,8 @@ Invisibly, the path to the cached DuckDB database.
 ## Examples
 
 ``` r
-# \donttest{
+if (FALSE) { # \dontrun{
 install_fishglob_data()
-#> Using cached catch data
-#> Using cached haul data
-#> Using cached taxon data
-#> Using cached survey data
-#> FishGlob data are ready in /home/runner/.cache/R/fishglobr/fishglob.duckdb
 # then see ?get_getdata
-# }
+} # }
 ```
