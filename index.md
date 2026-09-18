@@ -1,6 +1,6 @@
 # fishglobr
 
-## THIS IS AN EXPERIMENTAL DRAFT PROJECT NOT BE USED AT THIS STAGE!
+## THIS IS AN EXPERIMENTAL DRAFT PROJECT NOT TO BE USED AT THIS STAGE!
 
 fishglobr (perhaps to be renamed to fishglob) is an R package for
 efficiently downloading, caching, and querying the
@@ -67,8 +67,8 @@ dat <- get_data(
   year = 2000:2021
 )
 head(dat[c("scientific_name", "year", "latitude", "longitude", "wgt_cpue")], n = 3)
-#>      scientific_name year latitude longitude wgt_cpue
-#> 1 Sebastes fasciatus 2021 40.75000 -68.80000      0.0
-#> 2 Sebastes fasciatus 2021 41.76667 -65.83333      0.0
-#> 3 Sebastes fasciatus 2021 42.01667 -65.96667      0.4
+#>      scientific_name year latitude longitude   wgt_cpue
+#> 1 Sebastes fasciatus 2021 42.04747 -67.71460 0.06549118
+#> 2 Sebastes fasciatus 2021 41.84667 -68.20291 0.25524769
+#> 3 Sebastes fasciatus 2021 42.20143 -66.86743 1.13853904
 ```
