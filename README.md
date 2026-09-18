@@ -34,13 +34,13 @@ database.
 ``` r
 library(fishglobr)
 install_fishglob_data()
-Downloading catch ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ |  65 MB/ 65 MB ETA:  0s
-Downloading haul ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ | 4.7 MB/4.7 MB ETA:  0s
-Downloading taxon ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ |  49 kB/ 49 kB ETA:  0s
-Downloading survey ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ | 0.7 kB/0.7 kB ETA:  0s
-Building the local FishGlob DuckDB database
-FishGlob data are ready in
-~/Library/Caches/org.R-project.R/R/fishglobr/fishglob.duckdb
+#> Downloading catch ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ |  65 MB/ 65 MB ETA:  0s
+#> Downloading haul ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ | 4.7 MB/4.7 MB ETA:  0s
+#> Downloading taxon ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ |  49 kB/ 49 kB ETA:  0s
+#> Downloading survey ■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■ | 0.7 kB/0.7 kB ETA:  0s
+#> Building the local FishGlob DuckDB database
+#> FishGlob data are ready in
+#> ~/Library/Caches/org.R-project.R/R/fishglobr/fishglob.duckdb
 ```
 
 ``` r
@@ -71,8 +71,8 @@ dat <- get_data(
   year = 2000:2021
 )
 head(dat[c("scientific_name", "year", "latitude", "longitude", "wgt_cpue")], n = 3)
-#>      scientific_name year latitude longitude   wgt_cpue
-#> 1 Sebastes fasciatus 2021 42.04747 -67.71460 0.06549118
-#> 2 Sebastes fasciatus 2021 41.84667 -68.20291 0.25524769
-#> 3 Sebastes fasciatus 2021 42.20143 -66.86743 1.13853904
+#>      scientific_name year latitude longitude wgt_cpue
+#> 1 Sebastes fasciatus 2021 41.40189 -66.16553    0.002
+#> 2 Sebastes fasciatus 2021 41.93574 -65.85122    0.016
+#> 3 Sebastes fasciatus 2021 42.17893 -67.67522    1.260
 ```
