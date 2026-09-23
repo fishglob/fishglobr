@@ -22,8 +22,7 @@ bottom trawl surveys.
 You can install the development version of fishglobr like so:
 
 ``` r
-# temporary location; to be moved to fishglob group
-pak::pak("seananderson/fishglobr")
+pak::pak("fishglob/fishglobr")
 ```
 
 ## Example

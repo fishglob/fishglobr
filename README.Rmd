@@ -28,8 +28,7 @@ fishglobr (perhaps to be renamed to fishglob) is an R package for efficiently do
 You can install the development version of fishglobr like so:
 
 ``` r
-# temporary location; to be moved to fishglob group
-pak::pak("seananderson/fishglobr")
+pak::pak("fishglob/fishglobr")
 ```
 
 ## Example
